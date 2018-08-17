@@ -16,7 +16,6 @@ public class ServiceProxyClient {
     private static class ServiceProxy implements InvocationHandler {
 
         private Class clazz;
-
         public ServiceProxy(Class clazz) {
             this.clazz = clazz;
         }
