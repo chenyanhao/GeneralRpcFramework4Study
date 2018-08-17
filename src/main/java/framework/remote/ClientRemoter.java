@@ -10,11 +10,9 @@ public class ClientRemoter {
 
     public static final ClientRemoter CLIENT = new ClientRemoter();
 
-    private static final String LOCALHOST = "127.0.0.1";
-
     public byte[] getDataRemote(byte[] requestData) {
         try (Socket socket = new Socket()) {
-            socket.connect(new InetSocketAddress(LOCALHOST, 8888));
+            socket.connect(new InetSocketAddress(MyConstans.LOCALHOST, MyConstans.RPC_SERVICE_PORT));
             socket.getOutputStream().write(requestData);
             socket.getOutputStream().flush();
 
