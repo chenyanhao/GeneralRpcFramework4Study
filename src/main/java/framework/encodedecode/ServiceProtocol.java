@@ -1,4 +1,4 @@
-package encodedecode;
+package framework.encodedecode;
 
 import utils.JsonUtils;
 
